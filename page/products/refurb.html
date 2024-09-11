@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>coway | 코웨이</title>
+        <meta name="title" content="" />
+        <meta name="robots" content="index,follow" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="copyright" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="logo.png" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico" />
+
+        <link rel="stylesheet" href="/../../css/reset.css" />
+        <link rel="stylesheet" href="/../../css/common.css" />
+        <link rel="stylesheet" href="/../../css/main.css" />
+        <link rel="stylesheet" href="/../../css/products.css" />
+        <link rel="stylesheet" href="/../../css/modal1.css" />
+        <link rel="stylesheet" href="/../../css/modal2.css" />
+
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    </head>
+    <body>
+        <p id="skipNav"><a href="#content">본문바로가기</a></p>
+        <div id="wrap">
+            <header id="header" class="off">
+                <div class="inner"></div>
+                <!-- header 추가 -->
+            </header>
+            <!-- //header -->
+            <section id="lifeElc">
+                <navigator id="navigator"></navigator>
+
+                <img class="mainImg" src="/../../images/products/lifeElc/refurbelc_main.jpg" alt="mainImg" />
+                <div class="imgInfo">
+                    <p class="h1">베스트 제품을<br />리퍼브 특가로 만나요</p>
+                    <p class="h2">새롭게 재탄생한 리퍼브 제품을 만나보세요!</p>
+                    <div><a href="#">자세히보기</a></div>
+                </div>
+
+                <div class="refurbishment">
+                    <div class="aboutRefurb">
+                        <p class="refurbEng">Refurbishment</p>
+                        <h2 class="refurbKor">리퍼브 제품이란</h2>
+                        <p class="refurbComment">
+                            16개월 이내 반품된 상태 우수 제품을 선별하여<br />
+                            새롭게 재탄생시킨 제품을 말합니다.
+                        </p>
+                        <strong class="checkcomment">제품 입고 시 알림을 보내드려요!</strong>
+                        <button class="refurbBtn">리퍼브 할인 알림 신청</button>
+                    </div>
+                    <div class="onlyCowayRefurb">
+                        <p class="onlyCoway">코웨이만의 특별한</p>
+                        <h2 class="procedure">리퍼브 제품 탄생 과정</h2>
+                        <ul class="refurbMakingStep">
+                            <li>
+                                <div>
+                                    <span>1</span>
+                                    <strong>믿을 수 있는 기능과 성능</strong>
+                                    <p>새 제품에 준하는 기능/성능으로 재탄생</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>2</span>
+                                    <strong>안전한 제품 인증</strong>
+                                    <p>안심하고 사용하실 수 있도록 제품 안전 인증 취득</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>3</span>
+                                    <strong>합리적인 가격</strong>
+                                    <p>재활용을 통한 자원 절감으로 낮춘 가격</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="processList">
+                            <li>제품<br />선별</li>
+                            <li>완전분해<br />클리닝</li>
+                            <li>자재 및<br />부품 교체</li>
+                            <li>성능<br />테스트</li>
+                            <li>제품 인증<br />취득</li>
+                            <li>조립 및<br />포장</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contents">
+                    <div class="filter">
+                        <p class="filterReset">필터 초기화<img src="/../../images/common/ico_reset3.png" alt="filterReset" /></p>
+                        <div class="category">
+                            <p>카테고리<img class="arrow" src="/../../images/common/arr_up1.png" alt="arrowUp" /></p>
+                            <ul>
+                                <li><input type="checkbox" name="lifeElc" id="electricRange" /><label for="electricRange">전자레인지</label></li>
+                                <li><input type="checkbox" name="lifeElc" id="etc" /><label for="etc">기타</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="itemList">
+                        <div>
+                            <p class="totalcnt"></p>
+                            <div class="sort">신상품순<img class="arrow" src="/../../images/common/arr_down1.png" alt="arrowDown" /></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <!-- footer추가 -->
+            </footer>
+
+            <!-- 모달 -->
+            <div id="modal">
+                <div class="background"></div>
+                <div class="popup popup1">
+                    <strong id="popupTitle"></strong>
+                    <p id="popupDesc"></p>
+                    <button class="close"><i class="xi-close"></i></button>
+                    <div class="btns">
+                        <button class="sure">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 비교하기 전용 모달창 -->
+            <div id="modal2">
+                <div class="background2"></div>
+                <div class="popup2 popup3">
+                    <strong id="popupTitle2">한눈에 비교하기</strong>
+                    <button class="close"><i class="xi-close"></i></button>
+                    <!-- <div class="compareOnePage">
+                        <div class="scrollArea">
+                            <ul class="compareList">
+                                <li class="noPrd">
+                                    <div class="noData">
+                                        <p>제품 리스트에서<br />'비교담기' 버튼을<br />눌러주세요.</p>
+                                    </div>
+                                </li>
+                                <li class="noPrd">
+                                    <div class="noData">
+                                        <div class="noData">
+                                            <p>제품 리스트에서<br />'비교담기' 버튼을<br />눌러주세요.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="noPrd">
+                                    <div class="noData">
+                                        <div class="noData">
+                                            <p>제품 리스트에서<br />'비교담기' 버튼을<br />눌러주세요.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="noPrd">
+                                    <div class="noData">
+                                        <div class="noData">
+                                            <p>제품 리스트에서<br />'비교담기' 버튼을<br />눌러주세요.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="defualtInfo">
+                        <p class="defaultTitle">기본정보</p>
+                        <div class="compareInfo"></div>
+                        <p class="etcInfo">
+                            제품별 부가기능, 구매유형, 프로모션 적용에 따라 결제금액이 상이할 수 있습니다. 자세한 정보는 각 제품별 상세페이지에서 확인해주세요
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/../../js/common.js"></script>
+        <script type="module" src="/../../js/navigator.js"></script>
+        <script type="module" src="/../../js/sub.js"></script>
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>팝업창 예시</title>
+
+        <link rel="stylesheet" href="./css/reset.css" />
+
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+
+        <style>
+            body {
+                padding: 50px;
+            }
+            #wrap {
+                width: 100%;
+            }
+            .popup {
+                margin: 30px;
+            }
+
+            /*  ---------css 여기서부터 가져가시면 됩니다.---------- */
+            /* 맨 밑부분은 본인이 가져간 팝업에 맞는 css 가져가세요 */
+            /* 공통 부분 */
+            .popup {
+                width: 365px;
+                border: 1px solid #1b2529;
+                position: relative;
+                padding: 32px 16px 16px 24px;
+                border-radius: 5px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+            }
+            .popup strong {
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .popup .close {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+            .popup .close i {
+                font-weight: 500;
+                font-size: 24px;
+                color: #1b2529;
+                transition: 0.25s ease-in-out;
+            }
+            .popup .close:hover i {
+                transform: rotate(90deg);
+            }
+            .popup .btns {
+                padding-top: 32px;
+                display: flex;
+                gap: 8px;
+                justify-content: flex-end;
+            }
+            .popup .remove,
+            .sure {
+                background: #1b2529;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                width: 76px;
+                height: 36px;
+                font-size: 14px;
+                font-weight: 300;
+                cursor: pointer;
+            }
+            /* //공통 부분 끝 */
+
+            /* 본인이 가져간 팝업에 맞는 css 가져가세요 */
+            /* popup1 */
+            .popup1 strong {
+                padding-top: 20px;
+                word-break: break-all;
+            }
+
+            /* popup2 */
+            .popup2 strong {
+                width: 83%;
+                word-break: break-all;
+            }
+            .popup2 p {
+                margin-top: 8px;
+                font-size: 15px;
+                word-break: break-all;
+            }
+
+            /* popup3 */
+            .popup3 strong {
+                padding-top: 20px;
+                word-break: break-all;
+            }
+
+            /* popup4 */
+            .popup4 strong {
+                width: 83%;
+                word-break: break-all;
+            }
+            .popup4 p {
+                margin-top: 8px;
+                font-size: 15px;
+                word-break: break-all;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="skipNav"><a href="#content">본문바로가기</a></p>
+        <div id="wrap">
+            <!-- 버튼 색 수정 필요하시면 팀장한테 일단 한번 물어봐주세요 -->
+            <!-- 혹시 팝업 뒷배경 어둡게 해야하는경우 팀장한테 한번 말해주세요 색깔 맞추게용 -->
+            <!-- -----------여기부터 팝업------------ -->
+
+            <!-- 제목1 버튼 1개 -->
+            <div class="popup popup1">
+                <strong>팝업 제목입니다.</strong>
+                <button class="close"><i class="xi-close"></i></button>
+                <div class="btns">
+                    <button class="sure">확인</button>
+                </div>
+            </div>
+
+            <!-- 제목1 내용1 버튼 1개 -->
+            <div class="popup popup2">
+                <strong>팝업 제목입니다.</strong>
+                <p>팝업내용입니다.</p>
+                <button class="close"><i class="xi-close"></i></button>
+                <div class="btns">
+                    <button class="sure">확인</button>
+                </div>
+            </div>
+
+            <!-- 제목1 버튼 2개 -->
+            <div class="popup popup3">
+                <strong>팝업 제목입니다.</strong>
+                <button class="close"><i class="xi-close"></i></button>
+                <div class="btns">
+                    <button class="remove">취소</button>
+                    <button class="sure">확인</button>
+                </div>
+            </div>
+
+            <!-- 제목1 내용1 버튼 2개 -->
+            <div class="popup popup4">
+                <strong>팝업 제목입니다.</strong>
+                <p>팝업 내용입니다.</p>
+                <button class="close"><i class="xi-close"></i></button>
+                <div class="btns">
+                    <button class="remove">취소</button>
+                    <button class="sure">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="/js/common.js"></script>
+    </body>
+</html>

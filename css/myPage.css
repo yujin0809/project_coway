@@ -1,0 +1,327 @@
+.myPage {
+    width: 100%;
+}
+.myPage .inner {
+    display: flex;
+    padding-top: 40px;
+}
+/* ---------------------------------------------------side-menu */
+.myPage .inner .side-menu {
+    width: 200px;
+    margin: 0 40px;
+}
+.myPage .inner .side-menu ul {
+    margin-top: 32px;
+}
+.myPage .inner .side-menu ul:nth-child(1) {
+    margin-top: 0;
+}
+.myPage .inner .side-menu ul li {
+    margin: 0 8px;
+    font-size: 15px;
+}
+.myPage .inner .side-menu ul li a {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+    box-sizing: border-box;
+    color: var(--font-color-grey-1);
+}
+.myPage .inner .side-menu ul li:first-of-type {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 4px;
+}
+.myPage .inner .side-menu ul li:first-of-type a {
+    color: var(--font-color);
+    cursor: default;
+}
+.myPage .inner .side-menu ul li:hover:not(:first-child) a {
+    color: var(--main-color);
+}
+/* ---------------------------------------------------main-text */
+.myPage .inner .main-text {
+    width: 1000px;
+    margin-top: 30px;
+}
+.myPage .inner .main-text h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+/* mypage-visual */
+.myPage .inner .main-text .mypage-visual {
+    height: 200px;
+    background: #80c3e0;
+    border-radius: 5px;
+    margin: 25px 0;
+}
+.myPage .inner .main-text .mypage-visual p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+}
+.myPage .inner .main-text .mypage-visual p:nth-child(1) {
+    padding-top: 50px;
+}
+.myPage .inner .main-text .mypage-visual .register {
+    margin-top: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.myPage .inner .main-text .mypage-visual .register i {
+    font-size: 16px;
+}
+/* left */
+.myPage .inner .main-text .mypage-content {
+    display: flex;
+}
+.myPage .inner .main-text .mypage-content .left,
+.recommend-product {
+    width: 490px;
+    height: 430px;
+}
+.myPage .inner .main-text .left {
+    margin-right: 17px;
+}
+.myPage .inner .main-text .left h3 {
+    font-size: 18px;
+    margin: 0 15px 10px;
+    padding: 10px 0 5px 10px;
+    border-bottom: 2px solid #fff;
+}
+.myPage .inner .main-text .left .num {
+    font-size: 40px;
+    font-weight: 600;
+}
+.myPage .inner .main-text .left i {
+    font-size: 25px;
+    color: #575656;
+}
+.myPage .inner .main-text .left .rent-purchase,
+.delivery {
+    background: #000;
+    color: #fff;
+    height: 200px;
+    border-radius: 5px;
+}
+.myPage .inner .main-text .left .rent-purchase {
+    margin-bottom: 30px;
+}
+.myPage .inner .main-text .left .rent-purchase .num-box,
+.delivery-num-box {
+    display: flex;
+    padding: 20px 30px;
+    text-align: center;
+    margin: auto;
+}
+.myPage .inner .main-text .left .rent-num {
+    margin-right: 30px;
+    position: relative;
+}
+.myPage .inner .main-text .left .delivery-num {
+    margin-right: 40px;
+    position: relative;
+}
+.myPage .inner .main-text .left .rent-purchase .rent-num:nth-child(1) {
+    margin-left: 40px;
+}
+.myPage .inner .main-text .left .delivery .delivery-num:nth-child(1) {
+    margin-left: 80px;
+}
+.myPage .inner .main-text .left .rent-purchase .num-box .rent-num i {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+.myPage .inner .main-text .left .delivery .delivery-num i {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+/* recommend-product */
+.myPage .inner .main-text .recommend-product h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 15px;
+}
+.myPage .inner .main-text .recommend-product .product-content {
+    display: flex;
+}
+.myPage .inner .main-text .recommend-product .product {
+    border: 1px solid #000;
+    width: 240px;
+    margin-right: 20px;
+    background: var(--background-color-2);
+    border-radius: 5px;
+    border: none;
+    padding: 0 20px 20px;
+    position: relative;
+}
+.myPage .inner .main-text .recommend-product .product:nth-child(2) {
+    margin-right: 0;
+}
+.myPage .inner .main-text .recommend-product .product img {
+    width: 155px;
+    display: block;
+    margin: auto;
+}
+.myPage .inner .main-text .recommend-product .product em {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--font-color-grey-1);
+    display: block;
+}
+.myPage .inner .main-text .recommend-product .product strong {
+    font-weight: 700;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.myPage .inner .main-text .recommend-product .product .explain {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.myPage .inner .main-text .recommend-product .product .explain .title p {
+    font-size: 13px;
+    font-weight: 700;
+}
+.myPage .inner .main-text .recommend-product .product .explain .money p {
+    font-size: 13px;
+    font-weight: 700;
+}
+.myPage .inner .main-text .recommend-product .product .explain .money p:nth-child(2) {
+    color: var(--main-color);
+}
+.myPage .inner .main-text .recommend-product .product .product-going {
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    color: var(--font-color-grey-2);
+    cursor: pointer;
+}
+.myPage .inner .main-text .recommend-product .product i {
+    padding-left: 10px;
+    font-size: 14px;
+}
+.myPage .inner .main-text .recommend-product .other-product {
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 13px 40px;
+    display: flex;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.myPage .inner .main-text .recommend-product .other-product p {
+    font-weight: 700;
+    margin-left: 30px;
+    transform: translateX(50%);
+}
+.myPage .inner .main-text .recommend-product .other-product i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    right: 120px;
+}
+/* pop */
+#header {
+    z-index: 1;
+}
+#footer {
+    /* display: none; */
+    margin-top: 120px;
+}
+#pop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+    transition: display 0.5s ease-in-out;
+}
+#pop .product-registration {
+    background: #fff;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    z-index: 50;
+    transition: 0.3s;
+}
+#pop .product-registration .inner {
+    width: 600px;
+    padding: 20px 25px;
+    position: relative;
+}
+#pop .product-registration .inner h2 {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+#pop .product-registration .inner .registration-content {
+    margin-top: 60px;
+}
+#pop .product-registration .inner .registration-content .close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+#pop .product-registration .inner .registration-content .close i {
+    font-weight: 500;
+    font-size: 24px;
+    color: #1b2529;
+    transition: 0.25s ease-in-out;
+}
+#pop .product-registration .inner .registration-content .close:hover i {
+    transform: rotate(90deg);
+}
+#pop .product-registration .inner .registration-content h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+#pop .product-registration .inner .registration-content input {
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: var(--background-color-2);
+    border-radius: 5px;
+    outline: none;
+}
+/* 크롬, 사파리, 엣지 */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#pop .product-registration .inner .registration-content input::placeholder {
+    color: var(--font-color-grey-2);
+}
+#pop .product-registration .inner .registration-content p {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: var(--font-color);
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}

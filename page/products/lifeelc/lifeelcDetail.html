@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>coway | 코웨이</title>
+        <meta name="title" content="" />
+        <meta name="robots" content="index,follow" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="copyright" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="logo.png" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="../../../images/common/favicon.ico" />
+
+        <link rel="stylesheet" href="/../../css/reset.css" />
+        <link rel="stylesheet" href="/../../css/common.css" />
+        <link rel="stylesheet" href="/../../css/main.css" />
+        <link rel="stylesheet" href="/../../css/products.css" />
+        <link rel="stylesheet" href="/../../css/modal1.css" />
+
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    </head>
+    <body>
+        <p id="skipNav"><a href="#content">본문바로가기</a></p>
+        <div id="wrap">
+            <header id="header" class="off">
+                <div class="inner"></div>
+                <!-- header 추가 -->
+            </header>
+            <!-- //header -->
+            <section id="lifeElcDetail">
+                <navigator id="navigator"></navigator>
+
+                <div class="detailDiv">
+                    <!-- 사진 -->
+                    <div class="leftDiv">
+                        <img class="mainImg" />
+                        <div class="subImg"></div>
+                    </div>
+
+                    <!-- 제품 옵션 및 구매 -->
+                    <div class="rightDiv">
+                        <div class="info">
+                            <span class="new"></span>
+                            <span class="point"></span>
+                            <span class="best"></span>
+
+                            <p class="name"></p>
+
+                            <p class="model"></p>
+
+                            <span class="starPoint"><img /></span>
+                            <span class="starCnt"></span>
+                        </div>
+                        <div class="option">
+                            <p class="colorComment">색상</p>
+                            <p class="color"></p>
+                            <ul class="colorList"></ul>
+                        </div>
+
+                        <!-- Tab -->
+                        <ul class="Type">
+                            <li class="rentType">렌탈</li>
+                            <li class="buyType">구매</li>
+                        </ul>
+
+                        <!-- rent -->
+                        <div class="rent">
+                            <div class="top1">
+                                <p class="title">렌탈 프로모션</p>
+                                <div class="registRegist">
+                                    <span>렌탈 등록비 <span class="fnt_gray">할인</span></span>
+                                    <span class="registPrice"></span>
+                                </div>
+                                <p class="infoRent">렌탈 등록비</p>
+                                <div class="promotion">
+                                    <span>프로모션 할인 혜택</span>
+                                    <span class="promotionPrice"></span>
+                                </div>
+                            </div>
+
+                            <div class="top2">
+                                <div class="twoMoreOrder">
+                                    <input type="checkbox" name="discount" id="twoMore" class="twoMore" />
+                                    <label for="twoMore">
+                                        <span><span class="fnt_sky">2대 이상 </span>주문 시</span>
+                                    </label>
+                                    <span class="twoMoreOrderPrice"></span>
+                                </div>
+                                <div class="haveCoway">
+                                    <input type="checkbox" name="discount" id="have" class="have" />
+                                    <label for="have">
+                                        <span><span class="fnt_sky">코웨이 </span>제품 보유 시</span>
+                                    </label>
+                                    <span class="haveCowayPrice"></span>
+                                </div>
+                                <div class="addDiscount">
+                                    <span>추가 할인 계산하기</span>
+                                    <span class="addDiscountPrice">- 0원</span>
+                                </div>
+
+                                <div class="disCountTotal">
+                                    <span><span class="disCountTotalText">6년 </span>약정 최대 할인 총액</span>
+                                    <span class="disCountTotalPrice"></span>
+                                </div>
+                            </div>
+
+                            <div class="mid">
+                                <div class="manageType">
+                                    <span class="manageTypeText">관리유형</span>
+                                    <select class="manageSelect">
+                                        <option value="serviceFree">서비스프리</option>
+                                        <option value="visit">방문관리</option>
+                                    </select>
+                                </div>
+                                <div class="rentInstallType">
+                                    <span class="installTypeText">설치방식</span>
+                                    <select class="installSelect">
+                                        <option value="builtIn">빌트인</option>
+                                        <option value="freeStand">프리스탠드</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="rentPriceResult">
+                                <div class="rentTotal">
+                                    <span class="rentText">예상 렌탈료</span>
+                                    <em>월<span class="rentPrice"></span>원</em>
+                                </div>
+                            </div>
+
+                            <div class="rentBtns">
+                                <button class="rentAddBtn">장바구니</button>
+                                <button class="rentBtn">렌탈하기</button>
+                            </div>
+
+                            <div class="rentNotice">
+                                <p>렌탈료 총합(렌탈등록비 할인혜택 적용, 프로모션 적용 기준)</p>
+                                <p class="totalUsePrice"></p>
+                            </div>
+                        </div>
+
+                        <!-- buy -->
+                        <div class="buy">
+                            <div class="buyInstallType">
+                                <span class="installTypeText">설치방식</span>
+                                <select class="installSelect">
+                                    <option value="builtIn">빌트인</option>
+                                    <option value="freeStand">프리스탠드</option>
+                                </select>
+                            </div>
+                            <div class="cardDInfo">
+                                <div class="cardDiscount">
+                                    <span class="cardDiscountText1">카드 혜택</span>
+                                    <span class="cardDiscountText2">100만원 이상 결제 시 적용</span>
+                                </div>
+                                <div class="card BC">
+                                    <p>[비씨카드] 최대<span class="month">12개월</span>무이자</p>
+                                </div>
+                                <div class="card KB">
+                                    <p>[KB 국민카드] 최대<span class="month">24개월</span>무이자</p>
+                                </div>
+                                <div class="card HN">
+                                    <p>[하나카드] 최대<span class="month">24개월</span>무이자</p>
+                                </div>
+                                <div class="card SS">
+                                    <p>[삼성카드] 최대<span class="month">24개월</span>무이자</p>
+                                </div>
+                                <div class="card HD">
+                                    <p>[현대카드] 최대<span class="month">24개월</span>무이자</p>
+                                </div>
+                            </div>
+                            <div class="buyPriceResult">
+                                <div class="buyTotal">
+                                    <span class="buyText">예상 결제금액</span>
+                                    <em><span class="buyPrice"></span>원</em>
+                                </div>
+                            </div>
+                            <div class="buyBtns">
+                                <button class="buyAddBtn">장바구니</button>
+                                <button class="buyBtn">구매하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <!-- footer추가 -->
+            </footer>
+
+            <!-- 모달 -->
+            <div id="modal">
+                <div class="background"></div>
+                <div class="popup popup1">
+                    <strong id="popupTitle"></strong>
+                    <p id="popupDesc"></p>
+                    <button class="close"><i class="xi-close"></i></button>
+                    <div class="btns">
+                        <button class="sure">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/../../js/common.js"></script>
+        <script src="/../../js/navigator.js"></script>
+        <script type="module" src="/../../js/sub.js"></script>
+    </body>
+</html>

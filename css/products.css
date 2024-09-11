@@ -1,0 +1,1529 @@
+/* -------------------------------------------------- */
+/* lifeElc */
+#lifeElc {
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    margin-bottom: 120px;
+}
+#lifeElc .mainImg {
+    position: relative;
+    width: 96%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    user-select: none;
+}
+
+#lifeElc .imgInfo {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    left: 300px;
+    top: 210px;
+}
+
+#lifeElc .imgInfo .h1 {
+    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.36;
+    color: white;
+    user-select: none;
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+#lifeElc .imgInfo .h1.on {
+    transition: 1s;
+    transform: translateX(-5%);
+    opacity: 1;
+}
+
+#lifeElc .imgInfo .h2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: white;
+    user-select: none;
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+#lifeElc .imgInfo .h2.on {
+    transition: 1s;
+    transform: translateX(-5%);
+    opacity: 1;
+}
+
+#lifeElc .imgInfo div {
+    font-size: 14px;
+    font-weight: 700;
+    background: #ffffff;
+    border-radius: 4px;
+    user-select: none;
+    align-content: center;
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    margin-top: 40px;
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+#lifeElc .imgInfo div.on {
+    transition: 1s;
+    transform: translateX(-35%);
+    opacity: 1;
+}
+
+#lifeElc .imgInfo div a {
+    display: block;
+}
+
+#lifeElc .contents {
+    margin: 0 auto;
+    width: 1400px;
+    display: flex;
+}
+
+#lifeElc .contents .filter {
+    width: 200px;
+}
+
+#lifeElc .contents .filter p {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#lifeElc .contents .filter p img {
+    padding-left: 10px;
+}
+
+#lifeElc .contents .filter p .arrow {
+    padding-left: 80px;
+    height: 10px;
+    width: 15px;
+    cursor: pointer;
+}
+
+#lifeElc .contents .filter .filterReset {
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#lifeElc .contents .filter .category {
+    padding: 20px;
+    border: 1px solid #f2f4f5;
+    transition: height 1s;
+    width: 160px;
+    height: 130px;
+    margin-top: 10px;
+}
+#lifeElc .contents .filter .category.active {
+    transition: height 1s;
+    height: 10px;
+}
+
+#lifeElc .contents .filter .category ul {
+    padding: 10px;
+    transition: all 0.3s ease;
+    max-height: 200px;
+    opacity: 1;
+}
+#lifeElc .contents .filter .category ul.active {
+    max-height: 0;
+    opacity: 0;
+}
+
+#lifeElc .contents .filter .category ul li {
+    padding: 10px;
+    font-size: 15px;
+    color: #90a0a6;
+}
+
+#lifeElc .contents .filter .category ul li input[type='checkbox'] {
+    position: absolute;
+    /* left: -9999px;
+    top: 0;
+    overflow: hidden; */
+}
+
+#lifeElc .contents .filter .category ul li input[type='checkbox'] + label {
+    position: relative;
+    display: inline-block;
+    text-indent: 40px;
+    cursor: pointer;
+}
+
+#lifeElc .contents .filter .category ul li input[type='checkbox'] + label::after {
+    text-indent: 2px;
+    content: '';
+    background: url(/../../images/common/ico_check_off.png) no-repeat 0 0 / 25px auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#lifeElc .contents .filter .category ul li input[type='checkbox']:checked + label::after {
+    text-indent: 2px;
+    content: '';
+    background: url(/../../images/common/ico_check_on.png) no-repeat 0 0 / 25px auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#lifeElc .contents .itemList {
+    position: relative; /* 부모 요소에 relative 추가 */
+}
+
+#lifeElc .contents .itemList > div:first-of-type {
+    display: flex;
+    width: 100%;
+    padding-bottom: 16px;
+    padding-right: 52px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#lifeElc .contents .itemList p {
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+}
+
+#lifeElc .contents .itemList .totalcnt {
+    padding-left: 15px;
+}
+
+#lifeElc .contents .itemList .sort {
+    position: relative; /* sort에 relative 추가 */
+    text-align: right;
+    cursor: pointer;
+    width: 120px;
+    height: 20px;
+    font-size: 15px;
+}
+
+#lifeElc .contents .itemList .sort img {
+    padding: 7px;
+    height: 10px;
+    width: 15px;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList .sortList {
+    display: none;
+    position: absolute;
+    top: 26px;
+    right: 49px;
+    width: 120px; /* sort와 같은 너비로 설정 */
+    border: 2px solid #1b2529;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+}
+
+#lifeElc .contents .itemList .sortList ul li {
+    align-items: center;
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1;
+    user-select: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList .sortList ul li:hover {
+    color: var(--main-color);
+}
+
+#lifeElc .contents .itemList ul .listLi {
+    width: 340px;
+    padding: 15px;
+    display: inline-block;
+}
+
+#lifeElc .contents .itemList ul .listLi .top {
+    background: var(--border-color-1);
+    display: flex;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#lifeElc .contents .itemList ul .listLi .top .new {
+    color: var(--main-color);
+    width: 30px;
+}
+
+#lifeElc .contents .itemList ul .listLi .top .point {
+    display: block;
+    width: 10px;
+    height: 3px;
+    margin: 10px 5px 0;
+    background-color: #bec8cc;
+    border-radius: 50%;
+}
+
+#lifeElc .contents .itemList ul .listLi .top .pro {
+    color: var(--main-color);
+    text-align: end;
+}
+
+#lifeElc .contents .itemList ul .listLi .midPhoto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--border-color-1);
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--border-color-1);
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor .circle {
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor .circle.active {
+    border: 1px solid #000;
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor .color {
+    position: relative;
+    top: -3px;
+    left: -3px;
+    border-radius: 10px;
+    height: 16px;
+    width: 16px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor .colors {
+    position: relative;
+    top: -3px;
+    left: -3px;
+    border-radius: 10px;
+    height: 16px;
+    width: 16px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm {
+    padding: 20px;
+    background: var(--border-color-1);
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .model {
+    font-size: 14px;
+    color: #90a0a6;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1b2529;
+    line-height: 1.4;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .starPoint {
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .starPoint img {
+    padding-right: 5px;
+    width: 20px;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .starCnt {
+    font-size: 14px;
+    color: var(--font-color-grey-2);
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .buyDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .buyDiv .buy {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .buyDiv .purPrice {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .rentDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .rentDiv .rent {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .rentDiv .rentPrice {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .compareBtn {
+    position: relative;
+    left: 53%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 140px;
+    height: 50px;
+    border: 1px solid var(--border-color-2);
+    background-color: #fff;
+    border-radius: 4px;
+    color: var(--font-color-grey-1);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    padding-right: 25px;
+    text-align: end;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .compareBtn.active {
+    border: 1px solid var(--font-color);
+    color: #ffffff;
+    background-color: var(--font-color);
+    cursor: no-drop;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .compareBtn::before {
+    text-indent: 2px;
+    content: '';
+    background: url(/../../images/common/ico_check1.png) no-repeat 0 0 / 15px auto;
+    position: absolute;
+    left: 30px;
+    top: 18px;
+    width: 15px;
+    height: 13px;
+}
+
+#lifeElc .compareDiv {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #1b2529;
+    transition: 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+    z-index: 300;
+}
+
+#lifeElc .compareDiv .compareCntDiv {
+    margin: 0 auto;
+    width: 1400px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+#lifeElc .compareDiv .compareShowDiv {
+    margin: 0 auto;
+    width: 1400px;
+    height: 200px;
+    display: none;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul {
+    display: flex;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep {
+    margin: 15px 15px 15px 0px;
+    border-radius: 4px;
+    align-content: center;
+    text-align: left;
+    height: 120px;
+
+    width: 285px;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .noCom {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .Com {
+    position: relative;
+    background: #ffffff;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .comment {
+    position: relative;
+    font-size: 14px;
+    margin-left: 80px;
+    color: var(--font-color-grey-1);
+    user-select: none;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .comment::before {
+    content: '';
+    background: url(/../../images/common/ico_plus3.png) no-repeat 0 0 / 23px auto;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: -23%;
+    bottom: 33%;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .closeBtn {
+    content: '';
+    background: url(/../../images/common/ico_close3.png) no-repeat 0 0 / 18px auto;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 89.5%;
+    bottom: 75%;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep img {
+    width: 90px;
+    height: 90px;
+    margin-left: 30px;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .model {
+    position: absolute;
+    bottom: 57%;
+    left: 42%;
+    width: 150px;
+    font-size: 14px;
+    color: var(--font-color-grey-1);
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .name {
+    position: absolute;
+    bottom: 17%;
+    left: 42%;
+    width: 120px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--font-color);
+}
+
+#lifeElc .compareDiv .compareShowDiv button {
+    width: 150px;
+    height: 50px;
+    bottom: 50%;
+    left: 89%;
+    position: relative;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    background: #1b2529;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#lifeElc .compareDiv .compareShowDiv button:hover {
+    transition: 0.3s ease-in;
+    background: #090d0f;
+}
+
+#lifeElc .compareDiv .compareShowDiv .alldelDiv {
+    width: 55px;
+    height: 20px;
+    position: relative;
+    bottom: 22%;
+    left: 81%;
+    color: var(--font-color-grey-1);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#lifeElc .compareDiv .compareShowDiv .alldelDiv::before {
+    content: '';
+    background: url(/../../images/common/ico_del1.png) no-repeat 0 0 / 15px auto;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: -39%;
+    bottom: 17%;
+}
+
+/* -------------------------------------------------- */
+/* lifeElcDetail */
+
+.fnt_gray {
+    color: var(--font-color-grey-1);
+}
+
+.fnt_sky {
+    color: var(--main-color);
+}
+
+#lifeElcDetail {
+    background-color: var(--border-color-1);
+}
+
+#lifeElcDetail .detailDiv {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* 좌우 정렬 */
+}
+
+#lifeElcDetail .leftDiv {
+    width: 650px;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .mainImg {
+    width: 600px;
+    height: 600px;
+    padding-bottom: 30px;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .subImg {
+    width: 600px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .subImg .sub {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .subImg .sub.active {
+    box-shadow: 0 0 0 2px inset;
+    border-radius: 4px;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .subImg .sub img {
+    width: 70px;
+    height: 70px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv {
+    width: 550px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info {
+    width: 450px;
+    height: 150px;
+    background-color: #ffffff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 30px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .new {
+    color: var(--main-color);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .point.on {
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin: 10px 5px 0;
+    background-color: #bec8cc;
+    border-radius: 50%;
+    top: 20.5%;
+    left: 55.8%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .best {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .name {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .model {
+    display: inline;
+    margin-right: 8px;
+    font-size: 15px;
+    color: var(--font-color-grey-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .starPoint {
+    font-size: 15px;
+}
+#lifeElcDetail .detailDiv .rightDiv .info .starPoint img {
+    padding-top: 2px;
+    padding-right: 5px;
+    width: 18px;
+    height: 18px;
+}
+#lifeElcDetail .detailDiv .rightDiv .info .starCnt {
+    margin-left: 5px;
+    font-size: 14px;
+    color: var(--font-color-grey-2);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option {
+    width: 450px;
+    height: 90px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 30px;
+    border-top: 1px solid var(--border-color-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorComment {
+    margin-bottom: 18px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .color {
+    position: absolute;
+    right: 22%;
+    top: 42.2%;
+    font-size: 15px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorList {
+    display: flex;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorList li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorList li.active {
+    border: 1px solid black;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorList li .circle {
+    position: relative;
+    top: 8%;
+    left: 8%;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .Type {
+    width: 514px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .Type .rentType {
+    width: 255px;
+    text-align: center;
+    height: 100%;
+    align-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    background-color: #495154;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid black;
+}
+#lifeElcDetail .detailDiv .rightDiv .Type .rentType.active {
+    border: 2px solid #000;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: none;
+    font-size: 17px;
+    color: black;
+    background-color: white;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .Type .buyType {
+    width: 255px;
+    text-align: center;
+    height: 100%;
+    align-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    background-color: #495154;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 2px solid black;
+}
+#lifeElcDetail .detailDiv .rightDiv .Type .buyType.active {
+    border: 2px solid #000;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: none;
+    font-size: 17px;
+    color: black;
+    background-color: white;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent {
+    width: 450px;
+    padding: 30px;
+    background: white;
+    border: 2px solid #000;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy {
+    width: 450px;
+    padding: 30px;
+    background: white;
+    display: none;
+    border: 2px solid #000;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 {
+    background-color: var(--border-color-1);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-bottom: 20px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .title {
+    font-weight: 700;
+    font-size: 14px;
+    padding: 16px 16px 0 16px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .registRegist {
+    padding: 16px 16px 0 30px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .registRegist span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .registRegist::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 7px;
+    background: url(/../../images/common/ico_check4.png) no-repeat;
+    background-size: cover;
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .promotion {
+    margin: 20px 20px 0px 20px;
+    background-color: var(--background-color-4);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .promotion .promotionPrice {
+    margin-left: 44%;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .registRegist .registPrice {
+    margin-left: 48%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .infoRent {
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-align: end;
+    padding: 0px 30px 0 16px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0 5px;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .infoRent::after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: top;
+    background: url(/../../images/common/ico_tooTip2.png) no-repeat 0 0 / 100%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv {
+    background-color: white;
+    width: 300px;
+    padding: 17px 35px 17px 21px;
+    border: 2px solid #1b2529;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 6%;
+    right: 22%;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv p {
+    word-break: keep-all;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv p::before {
+    content: '';
+    display: block;
+    position: relative;
+    left: -8px;
+    top: 12px;
+    width: 3px;
+    height: 3px;
+    background: url(/../../images/common/dot_tip.png) no-repeat 0 0 / 100%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv button {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    background: url(/../../images/common/ico_close2.png) no-repeat 0 0 / 100%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 {
+    background-color: var(--border-color-1);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder {
+    padding: 0 16px 0 30px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder input[type='checkbox'] {
+    position: absolute;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder input[type='checkbox'] + label {
+    position: relative;
+    display: inline-block;
+    text-indent: 30px;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder input[type='checkbox'] + label::after {
+    text-indent: 2px;
+    content: '';
+    background: url(/../../images/common/ico_prdcheck_off.png) no-repeat 0 center / 19px auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder input[type='checkbox']:checked + label::after {
+    text-indent: 2px;
+    content: '';
+    background: url(/../../images/common/ico_prdcheck_on.png) no-repeat 0 center / 19px auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder .twoMoreOrderPrice {
+    margin-left: 47%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway {
+    padding: 0 16px 0 30px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway input[type='checkbox'] {
+    position: absolute;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway input[type='checkbox'] + label {
+    position: relative;
+    display: inline-block;
+    text-indent: 30px;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway input[type='checkbox'] + label::after {
+    text-indent: 2px;
+    content: '';
+    background: url(/../../images/common/ico_prdcheck_off.png) no-repeat 0 center / 19px auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway input[type='checkbox']:checked + label::after {
+    text-indent: 2px;
+    content: '';
+    background: url(/../../images/common/ico_prdcheck_on.png) no-repeat 0 center / 19px auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway .haveCowayPrice {
+    margin-left: 44.7%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .addDiscount {
+    margin: 20px;
+    background-color: var(--background-color-4);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: space-between;
+    display: flex;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .addDiscount .addDiscountPrice {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .disCountTotal {
+    padding: 20px 16px 20px 16px;
+    border-top: 1px solid var(--border-color-2);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .disCountTotal span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .disCountTotal .disCountTotalText {
+    color: var(--main-color);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .disCountTotal .disCountTotalPrice {
+    color: var(--main-color);
+    font-size: 23px;
+    font-weight: 600;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .manageType {
+    background-color: var(--border-color-1);
+    padding: 10px 20px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .manageType .manageTypeText {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .manageType .manageSelect {
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    background-color: var(--border-color-1);
+    text-align: left;
+    width: 300px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .manageType .manageSelect:focus {
+    background-color: var(--border-color-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .rentInstallType {
+    background-color: var(--border-color-1);
+    padding: 10px 20px 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .rentInstallType .installTypeText {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .rentInstallType .installSelect {
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    background-color: var(--border-color-1);
+    text-align: left;
+    width: 300px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult {
+    padding: 20px 0 20px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal em {
+    color: var(--main-color);
+    font-size: 14px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal .rentText {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal .rentPrice {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns button {
+    width: 220px;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns .rentAddBtn {
+    border: 1px solid var(--border-color-2);
+    background: #fff;
+    transition: 1s;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns .rentAddBtn:hover {
+    border: 1px solid var(--border-color-3);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns .rentBtn {
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: #ffffff;
+    transition: 1s;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns .rentBtn:hover {
+    border: 1px solid var(--font-color);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentNotice {
+    border-top: 1px solid var(--border-color-2);
+    padding: 10px 0 10px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentNotice p {
+    font-size: 13px;
+    color: var(--font-color-grey-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .buyInstallType {
+    background-color: var(--border-color-1);
+    padding: 10px 20px 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyInstallType {
+    background-color: var(--border-color-1);
+    padding: 10px 20px 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyInstallType .installTypeText {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyInstallType .installSelect {
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    background-color: var(--border-color-1);
+    text-align: left;
+    width: 300px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo {
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 20px 20px 10px;
+    background-color: var(--border-color-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .cardDiscount .cardDiscountText1 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .cardDiscount .cardDiscountText2 {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 6px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .cardDiscount {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e5e9eb;
+    display: flex;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .card p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .card p .month {
+    color: #fe7c20;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult {
+    padding: 20px 0 20px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult .buyTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult .buyTotal .buyText {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult .buyTotal .buyPrice {
+    color: var(--main-color);
+    font-size: 14px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult .buyTotal em {
+    color: var(--main-color);
+    font-size: 14px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns button {
+    width: 220px;
+    height: 50px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns .buyAddBtn {
+    border: 1px solid var(--border-color-2);
+    background: #fff;
+    transition: 1s;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns .buyAddBtn:hover {
+    border: 1px solid var(--border-color-3);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns .buyBtn {
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: #ffffff;
+    transition: 1s;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns .buyBtn:hover {
+    border: 1px solid var(--font-color);
+}
+/* -------------------------------------------------- */
+/* waterElc */
+
+/* -------------------------------------------------- */
+/* berexElc */
+
+/* -------------------------------------------------- */
+/* refurb */
+#lifeElc .refurbishment {
+    position: relative;
+    background: #f0f7ec;
+    border-radius: 10px;
+    padding: 60px 60px;
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#lifeElc .refurbishment .aboutRefurb {
+    border-right: 1px solid #4c993f;
+    padding-right: 40px;
+}
+
+#lifeElc .refurbishment .aboutRefurb .refurbEng {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4c993f;
+    letter-spacing: normal;
+}
+
+#lifeElc .refurbishment .aboutRefurb .refurbKor {
+    margin-top: 3px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#lifeElc .refurbishment .aboutRefurb .refurbComment {
+    margin-top: 18px;
+    margin-bottom: 30px;
+    color: #5f6669;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#lifeElc .refurbishment .aboutRefurb .checkcomment {
+    padding-left: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: #4c993f;
+    background: url(/../../images/common/ico_refurb_chk.png) no-repeat left center / 12px;
+}
+
+#lifeElc .refurbishment .aboutRefurb .refurbBtn {
+    width: 300px;
+    height: 62px;
+    font-size: 17px;
+    background: #4c993f;
+    color: #fff;
+    border-radius: 13px;
+    font-weight: 700;
+    border: none;
+    margin: 15px 0 0;
+    display: block;
+    cursor: pointer;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb {
+    padding-left: 40px;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .onlyCoway {
+    margin: 0 0 3px;
+    font-size: 15px;
+    color: #4c993f;
+    font-weight: bold;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .procedure {
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    margin: 0 0 15px;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .refurbMakingStep {
+    display: inline-flex;
+    gap: 34px;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .refurbMakingStep li div span {
+    display: inline-block;
+    width: 20px;
+    margin-right: 9px;
+    font-size: 15px;
+    color: #4c993f;
+    border-bottom: 1px solid #4c993f;
+    text-align: center;
+    font-weight: bold;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .refurbMakingStep li div strong {
+    font-weight: bold;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .refurbMakingStep li div p {
+    margin-top: 7px;
+    font-size: 16px;
+    color: #5f6669;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+    margin-top: 30px;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li {
+    position: relative;
+    width: 103px;
+    padding: 16px 12px 45px;
+    color: #90a0a6;
+    border-radius: 5px;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(1) {
+    background: #fff url('/../../images/common/ico_refurb_list1.png') no-repeat bottom 12px right 14px / 28px;
+}
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(2) {
+    background: #fff url('/../../images/common/ico_refurb_list2.png') no-repeat bottom 12px right 14px / 28px;
+}
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(3) {
+    background: #fff url('/../../images/common/ico_refurb_list3.png') no-repeat bottom 12px right 14px / 28px;
+}
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(4) {
+    background: #fff url('/../../images/common/ico_refurb_list4.png') no-repeat bottom 12px right 14px / 28px;
+}
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(5) {
+    background: #fff url('/../../images/common/ico_refurb_list5.png') no-repeat bottom 12px right 14px / 28px;
+}
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(6) {
+    background: #fff url('/../../images/common/ico_refurb_list6.png') no-repeat bottom 12px right 14px / 28px;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li::after {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #bec8cc;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(6)::after {
+    content: '';
+}
+/* -------------------------------------------------- */

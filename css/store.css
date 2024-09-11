@@ -1,0 +1,1239 @@
+/* ------------------------------------------------------------introduce */
+.introduce {
+    width: 100%;
+}
+/* .intro-visual */
+.introduce .intro-visual {
+    margin-top: 16px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url(/images/store/intro_visual.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: visible;
+}
+.introduce .intro-visual strong {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 280px;
+}
+.introduce .intro-visual .move {
+    width: 270px;
+    height: 80px;
+    position: absolute;
+    bottom: -40px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(66, 66, 66, 0.12);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+}
+.introduce .intro-visual .move a {
+    display: block;
+    padding-top: 5px;
+    position: relative;
+}
+.introduce .intro-visual .move:hover a::after {
+    transform: scale(1);
+    right: 0;
+}
+.introduce .intro-visual .move a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 30px;
+    top: 5px;
+    background-image: url(../images/store/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: scale(0);
+    transition: transform 0.2s ease, right 0.2s ease;
+}
+.introduce .intro-visual .move i {
+    margin-right: 15px;
+}
+.introduce .intro-visual .res-move {
+    right: 730px;
+}
+.introduce .intro-visual .recheck-move {
+    right: 425px;
+}
+
+.introduce .inner {
+    width: 1400px;
+    margin-bottom: 120px;
+}
+/* box1 */
+.introduce .inner .first-text {
+    margin-top: 300px;
+    text-align: center;
+}
+.introduce .inner .first-text h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+.introduce .inner .first-text p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* box2 */
+.introduce .inner .sub-text-image {
+    margin-top: 200px;
+}
+.introduce .inner .sub-text-image li {
+    width: 1400px;
+    margin-bottom: 300px;
+    display: flex;
+    position: relative;
+}
+.introduce .inner .sub-text-image li:nth-child(1) {
+    right: -150%;
+    transform: scale(1);
+    transition: right 1.5s ease;
+}
+
+.introduce .inner .sub-text-image li:nth-child(1).active {
+    right: 0;
+    transform: scale(1);
+}
+.introduce .inner .sub-text-image li:nth-child(2) {
+    left: -150%;
+    transform: scale(1);
+    transition: left 1.5s ease;
+}
+
+.introduce .inner .sub-text-image li:nth-child(2).active {
+    left: 0;
+    transform: scale(1);
+}
+.introduce .inner .sub-text-image li:nth-child(3) {
+    right: -150%;
+    transform: scale(1);
+    transition: right 1.5s ease;
+}
+
+.introduce .inner .sub-text-image li:nth-child(3).active {
+    right: 0;
+    transform: scale(1);
+}
+
+.introduce .inner .sub-text-image li img {
+    width: 660px;
+    height: 470px;
+}
+.introduce .inner .sub-text-image li .image-explain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+}
+.introduce .inner .sub-text-image li .image-explain h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.introduce .inner .sub-text-image li .image-explain p {
+    font-weight: 500;
+}
+
+.introduce .inner .sub-text-image li:nth-child(2) {
+    margin-left: 0;
+    margin-right: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+.introduce .inner .sub-text-image li:nth-child(2) .image-explain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 100px;
+    text-align: right;
+}
+
+/* box3 */
+.introduce .inner .store-experience {
+    width: 1400px;
+    position: relative;
+    padding-bottom: 100px;
+    height: 1000px;
+}
+.introduce .inner .store-experience h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.introduce .inner .store-experience img {
+    width: 100%;
+}
+.introduce .inner .store-experience .explain-box {
+    width: 800px;
+    height: 200px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 55px 90px 20px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(66, 66, 66, 0.12);
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+.introduce .inner .store-experience .explain-box h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-left: 20px;
+    text-align: center;
+}
+.introduce .inner .store-experience .explain-box p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--font-color-grey-2);
+    margin-left: 20px;
+}
+.introduce .inner .store-experience .explain-box .movement-page {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.introduce .inner .store-experience .explain-box .movement-page .movement {
+    position: relative;
+}
+.introduce .inner .store-experience .explain-box .movement-page .movement a {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.introduce .inner .store-experience .explain-box .movement-page .movement:hover a::after {
+    transform: scale(1);
+    right: 0;
+}
+.introduce .inner .store-experience .explain-box .movement-page .movement a::after {
+    content: '';
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 100px;
+    top: -3px;
+    background-image: url(../images/store/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: transform 0.2s ease, right 0.2s ease;
+    transform: scale(0);
+}
+.introduce .inner .store-experience .explain-box .movement-page .move-vendor a::after {
+    left: 160px;
+}
+
+/* box4 */
+.introduce .store-store {
+    background: var(--background-color-1);
+    padding: 100px 20px 150px;
+    margin-top: 100px;
+    width: 1800px;
+    position: relative;
+    margin-bottom: 120px;
+    margin: auto;
+    border-radius: 5px;
+}
+.introduce .store-store h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.introduce .store-store .store-slide-box {
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.introduce .store-store .store-slide-box button {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: none;
+    z-index: 1;
+    display: block;
+}
+.introduce .store-store .store-slide-box button i {
+    font-size: 40px;
+    cursor: pointer;
+}
+.introduce .store-store .to-store-prev {
+    left: 460px;
+}
+.introduce .store-store .to-store-next {
+    right: 470px;
+}
+.introduce .store-store .store-slide-box .to-store /*  ul  */ {
+    display: flex;
+    width: 100%;
+}
+.introduce .store-store .store-slide-box .to-store li {
+    display: block;
+    min-width: 800px;
+    box-sizing: border-box;
+    position: relative;
+    transform: translateX(-330px);
+    margin-right: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+.introduce .store-store .store-slide-box .to-store li img {
+    box-sizing: border-box;
+    width: 750px;
+    height: 400px;
+    display: block;
+    margin: 20px auto 0;
+    display: block;
+    box-sizing: border-box;
+}
+.introduce .store-store .store-slide-box .to-store li span {
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 130px;
+    left: 30px;
+    color: #fff;
+    display: block;
+}
+.introduce .store-store .store-slide-box .to-store li .to-store-name {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 20px 60px 15px 30px;
+    display: block;
+}
+.introduce .store-store .store-slide-box .to-store li .to-store-address {
+    color: var(--font-color-grey-1);
+    font-size: 22px;
+    margin: 0 30px;
+}
+
+/* ------------------------------------------------------------otherVendor */
+.other-vendor {
+    width: 100%;
+}
+.other-vendor .inner {
+    width: 1000px;
+    margin-bottom: 120px;
+}
+.other-vendor .inner h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 40px 0 30px 0;
+}
+.other-vendor .inner .sub-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+/* --------------------------vendor-select */
+.other-vendor .inner .vendor-select {
+    position: relative;
+    display: flex;
+}
+.other-vendor .inner .area-select i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 160px;
+    font-size: 20px;
+    color: var(--font-color-grey-1);
+    cursor: pointer;
+}
+/* area-select */
+.other-vendor .inner .area-select .area-list {
+    width: 190px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+    color: var(--font-color-grey-1);
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    background: var(--background-color-1);
+    padding-left: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+/* vendor-name-select  */
+.other-vendor .inner .vendor-name-select {
+    width: 700px;
+    height: 50px;
+    border-radius: 5px;
+    background: var(--background-color-1);
+}
+.other-vendor .inner .vendor-name-select input {
+    width: 500px;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 20px;
+    border: none;
+    background: none;
+    margin-top: 15px;
+    outline: none;
+}
+.other-vendor .inner .vendor-name-select input::placeholder {
+    color: var(--font-color-grey-1);
+}
+.other-vendor .inner .area-btn {
+    width: 80px;
+    height: 50px;
+    margin-left: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color-2);
+    background: none;
+    font-weight: 800;
+    font-size: 16px;
+}
+/* sub-select */
+.other-vendor .inner .sub-select {
+    margin: 35px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.other-vendor .inner .sub-select .total-vendor {
+    font-size: 18px;
+    font-weight: 500;
+}
+.other-vendor .inner .sub-select .vendor-type {
+    position: relative;
+}
+.other-vendor .inner .sub-select .vendor-type .type-box {
+    padding: 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 130px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: #fff;
+    display: none;
+}
+.other-vendor .inner .sub-select .vendor-type .type-box p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.other-vendor .inner .sub-select .vendor-type .type-box .management-display {
+    margin-bottom: 0;
+}
+
+/* --------------------------store-select */
+.other-vendor .inner .store-select {
+    width: 100%;
+}
+.other-vendor .inner .store-select li {
+    border-top: 1px solid var(--border-color-2);
+    padding: 28px 60px 25px 40px;
+    display: block;
+}
+.other-vendor .inner .store-select li:last-child {
+    border-bottom: 1px solid var(--border-color-2);
+}
+.other-vendor .inner .store-select li .type-distribution,
+.type-management-display {
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+.other-vendor .inner .store-select li .type-distribution {
+    background: #2eb7da;
+}
+.other-vendor .inner .store-select li .type-management-display {
+    background: #22b847;
+}
+.other-vendor .inner .store-select li .store-title {
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.other-vendor .inner .store-select li .address-num {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 13px 0;
+}
+.other-vendor .inner .store-select li .address-num .store-address,
+.store-num {
+    font-weight: 500;
+}
+.other-vendor .inner .store-select li .store-explain p {
+    font-size: 14px;
+    color: var(--font-color-grey-1);
+    font-weight: 500;
+}
+/* ------------------------------------------------------------reservation */
+.reservation {
+    width: 100%;
+}
+.reservation .inner {
+    width: 1400px;
+}
+
+/* top-submenu */
+.inner .top-submenu {
+    margin-top: 28px;
+    justify-content: center;
+    padding-bottom: 10px;
+    display: flex;
+    border-bottom: 1px solid var(--border-color-2);
+    margin-bottom: 95px;
+}
+.inner .top-submenu .reser,
+.recheck {
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+}
+.inner .top-submenu .reser {
+    margin-right: 70px;
+}
+.reservation .inner .top-submenu .reser::after {
+    content: '';
+    display: block;
+    border: 1px solid #000;
+    width: 130px;
+    margin-left: -10px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+}
+
+.reservation .inner .top-submenu .recheck a {
+    color: var(--font-color-grey-2);
+}
+
+.reservation .inner .top-submenu .recheck:hover a {
+    color: var(--font-color);
+}
+
+.reservation .inner .top-submenu .recheck a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--font-color);
+    transform: translateX(-50%);
+    transition: width 0.2s ease, transform 0.2s ease;
+}
+.reservation .inner .top-submenu .recheck a:hover::after {
+    width: 130px;
+    transform: translateX(-50%);
+    transition: width 0.2s ease, transform 0.2s ease;
+}
+
+/* sub-visual */
+.reservation .inner .sub-visual {
+    background-image: url(../images/store/sub_visual.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 200px;
+    margin-bottom: 70px;
+}
+/* reser-main 전체 (왼쪽,오른쪽 포함) */
+.reservation .inner .reser-main {
+    display: flex;
+    height: 750px;
+    border: 1px solid var(--background-color-2);
+    background: var(--background-color-2);
+    margin-bottom: 120px;
+}
+/* menuname  왼쪽 제목들 */
+.reservation .inner .reser-main .menuname {
+    width: 230px;
+    padding: 170px 0 0 50px;
+}
+
+.reservation .inner .reser-main .menuname li {
+    margin-bottom: 70px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--font-color-grey-2);
+    position: relative;
+    padding: 0 10px;
+}
+.reservation .inner .reser-main .menuname li p {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    right: -25px;
+    filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+}
+.reservation .inner .reser-main .menuname li.active {
+    color: var(--font-color);
+}
+.reservation .inner .reser-main .menuname li.active::after {
+    content: '';
+    display: block;
+    width: 200px;
+    border: 1px solid var(--main-color);
+    opacity: 0;
+    animation: line 1.5s ease forwards;
+}
+@keyframes line {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 200px;
+    }
+}
+.reservation .inner .reser-main .menuname li p.active {
+    color: var(--font-color);
+}
+/*--------------------- reservation-page 오른쪽 화면 전체 / 공통*/
+.reservation .inner .reser-main .reservation-page {
+    width: 1120px;
+    background: #fff;
+    display: block;
+    position: relative;
+}
+.reservation .inner .reser-main .reservation-page .store-choice.active,
+.date-choice.active,
+.time-choice.active,
+.product-choice.active,
+.data-reservation.active {
+    display: block;
+}
+.reservation .inner .reser-main .reservation-page .store-choice,
+.date-choice,
+.time-choice,
+.product-choice,
+.data-reservation {
+    position: absolute;
+    top: 80px;
+    left: 110px;
+    display: none;
+}
+.reservation .inner .reser-main .reservation-page h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+/* store-choice  방문 매장 선택*/
+.reservation .inner .reser-main .store-choice .contentbox {
+    width: 900px;
+}
+.reservation .inner .reser-main .store-choice .contentbox .contentbox-menu {
+    border: 1px solid var(--border-color-1);
+    display: flex;
+    height: 115px;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+.reservation .inner .reser-main .store-choice .contentbox .contentbox-menu li {
+    width: 115px;
+    height: 40px;
+    background: var(--background-color-1);
+    color: var(--font-color-grey-2);
+    border-radius: 45px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+.reservation .inner .reser-main .store-choice .contentbox .contentbox-menu li.active {
+    background: var(--background-color-3);
+    color: #fff;
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice {
+    height: 370px;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background: var(--background-color-1);
+    padding: 30px 70px 30px 30px;
+    overflow-y: scroll;
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice::-webkit-scrollbar {
+    width: 12px;
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice::-webkit-scrollbar-button {
+    display: none;
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice::-webkit-scrollbar-thumb {
+    background-color: var(--font-color-grey-2);
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice::-webkit-scrollbar-track {
+    background-color: var(--background-color-1);
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice .area-store {
+    background: #fff;
+    display: flex;
+    padding: 40px 35px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    scroll-snap-align: start;
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice .area-store.active {
+    border: 2px solid var(--main-color);
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice .area-store strong {
+    font-size: 22px;
+    font-weight: 700;
+    margin-right: 80px;
+}
+.reservation .inner .reser-main .store-choice .contentbox .content-choice .area-store p {
+    align-items: center;
+    font-size: 18px;
+    color: var(--font-color-grey-2);
+}
+
+.reservation .inner .reser-main .store-choice .contentbox .content-choice .area-store.active strong {
+    color: var(--main-color);
+}
+
+/* date-choice  예약일시 선택 */
+.reservation .inner .reser-main .date-choice .date-box {
+    display: flex;
+    padding-top: 20px;
+}
+.reservation .inner .reser-main .date-choice .choice-store-name,
+.choice-calendar {
+    border: 1px solid var(--border-color-4);
+    border-radius: 5px;
+    width: 460px;
+}
+.reservation .inner .reser-main .date-choice .choice-store-name .choiced-store-content {
+    display: flex;
+}
+.reservation .inner .reser-main .date-choice .choice-store-name .choice-title {
+    margin-left: 40px;
+}
+.reservation .inner .reser-main .date-choice .choice-store-name .choice-store-content {
+    margin-left: 10px;
+}
+.reservation .inner .reser-main .date-choice .choice-calendar {
+    border: 1px solid var(--border-color-2);
+    margin-left: 30px;
+}
+.reservation .inner .reser-main .date-choice .choice-store-name strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 41px 41px 20px;
+}
+.reservation .inner .reser-main .date-choice .choice-store-content {
+    margin-bottom: 30px;
+}
+.reservation .inner .reser-main .date-choice .choice-store-content .choice-title {
+    padding-left: 41px;
+}
+.reservation .inner .reser-main .page .date-box .choice-store-name .choiced-store-content .choice-store-text {
+    padding-left: 20px;
+}
+.reservation .inner .reser-main .date-choice em {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.reservation .inner .reser-main .date-choice p {
+    font-size: 18px;
+    color: var(--font-color-grey-1);
+    margin-bottom: 24px;
+}
+.reservation .inner .reser-main .date-choice .date-box .choice-calendar {
+    position: relative;
+}
+.reservation .inner .reser-main .date-choice .date-box .choice-calendar .month {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 30px;
+    text-align: center;
+    color: var(--font-color);
+}
+.reservation .inner .reser-main .date-choice .date-box .choice-calendar table {
+    width: 360px;
+    height: 230px;
+    margin-left: 60px;
+}
+.reservation .inner .reser-main .date-choice .date-box .choice-calendar table tr,
+td {
+    color: var(--font-color-grey-2);
+    text-align: center;
+    font-weight: 500;
+}
+.reservation .inner .reser-main .date-choice .date-box .choice-calendar table tr:first-child td {
+    margin-top: 20px; /* 위쪽에 20px 간격 추가 */
+}
+.reservation .inner .reser-main .date-choice .date-box .choice-calendar table td {
+    padding: 12px 0;
+}
+.reservation .inner .reser-main .date-choice .date-box .choice-calendar table td.active {
+    display: block;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: #fff;
+    box-sizing: border-box;
+}
+/* time-choice 예약시간 선택*/
+.reservation .inner .reser-main .time-choice .time-table {
+    border: 1px solid var(--border-color-2);
+    border-radius: 5px;
+    width: 920px;
+    padding: 35px 50px;
+    box-sizing: border-box;
+}
+.reservation .inner .reser-main .time-choice .time-table .time-explain {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--font-color-grey-2);
+    margin-bottom: 45px;
+}
+.reservation .inner .reser-main .time-choice .time-table .time-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+.reservation .inner .reser-main .time-choice .time-table .time-block li {
+    display: block;
+    width: 180px;
+    height: 50px;
+    border: 1px solid var(--border-color-2);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 17px 12px 0;
+}
+.reservation .inner .reser-main .time-choice .time-table .time-block li.active {
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+.reservation .inner .reser-main .time-choice .time-table .time-choice-explain {
+    margin-top: 40px;
+}
+.reservation .inner .reser-main .time-choice .time-table .time-choice-explain p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--font-color-grey-2);
+    margin-bottom: 2px;
+    padding-left: 15px;
+    position: relative;
+}
+.reservation .inner .reser-main .time-choice .time-table .time-choice-explain p::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    background: var(--font-color-grey-2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+}
+/* product-choice 체험제품 선택 */
+.reservation .inner .reser-main .product-choice {
+    position: relative;
+}
+.reservation .inner .reser-main .product-choice .product-choice-prev,
+.product-choice-next {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.reservation .inner .reser-main .product-choice .product-choice-prev {
+    left: -50px;
+}
+.reservation .inner .reser-main .product-choice .product-choice-next {
+    right: 110px;
+}
+.reservation .inner .reser-main .product-choice button i {
+    font-size: 30px;
+}
+.reservation .inner .reser-main .product-choice .product-explain {
+    margin-top: 20px;
+    font-weight: 500;
+    color: var(--font-color-grey-2);
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+.reservation .inner .reser-main .product-choice .product-explain::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    background: var(--font-color-grey-2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+}
+.reservation .inner .reser-main .product-choice .product-table-box {
+    display: flex;
+    width: 940px;
+    position: relative;
+    overflow: hidden;
+}
+.reservation .inner .reser-main .product-choice .product-table .product-table-product {
+    border: 1px solid var(--border-color-2);
+    border-radius: 5px;
+    min-width: 225px;
+    height: 430px;
+    margin-right: 10px;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+}
+.reservation .product-choice .product-table .product-table-product {
+    transition: transform 0.3s ease-in-out;
+}
+.reservation .product-choice .product-table .product-table-product img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 17px;
+}
+.reservation .product-choice .product-table .product-table-product .product-click {
+    border-radius: 50%;
+    border: 1px solid var(--border-color-2);
+    width: 27px;
+    height: 27px;
+    margin-left: 22px;
+    background: none;
+    display: block;
+}
+.reservation .product-choice .product-table .product-table-product .product-click i {
+    font-size: 18px;
+    margin-left: -2px;
+    margin-top: 2px;
+    color: var(--border-color-2);
+}
+.reservation .product-choice .product-table .product-table-product .product-click.active {
+    border: none;
+    background: var(--main-color);
+}
+.reservation .product-choice .product-table .product-table-product .product-click.active i {
+    color: #fff;
+}
+.reservation .product-choice .product-table .product-table-product strong {
+    display: block;
+    margin: 15px 22px 62px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.reservation .product-choice .product-table .product-table-product .time-late {
+    margin: auto;
+    margin: 0 22px;
+    height: 32px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--background-color-2);
+    color: var(--font-color-grey-2);
+}
+.reservation .product-choice .product-table > p {
+    color: var(--font-color-grey-2);
+    padding-left: 20px;
+    position: relative;
+}
+.reservation .product-choice .product-table > p::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    background: var(--font-color-grey-2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+}
+/* data-reservation  정보 입력 및 예약 신청 */
+.reservation .data-reservation .data-place {
+    margin-top: 40px;
+    display: flex;
+}
+.reservation .data-reservation .data-place .reser-name,
+.reser-phone {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 35px 0;
+    color: var(--font-color-grey-1);
+}
+.reservation .data-reservation .data-place input {
+    margin-left: 35px;
+    border: none;
+    background: none;
+    width: 250px;
+    outline: none;
+}
+.reservation .data-reservation .data-place input[type='number'] {
+    margin-left: 0;
+}
+/* 크롬, 사파리, 엣지 */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.reservation .data-reservation .data-place input::placeholder {
+    color: var(--font-color-grey-2);
+}
+.reservation .data-reservation .data-place .data-name,
+.data-num {
+    width: 450px;
+    height: 90px;
+    background: var(--background-color-2);
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.reservation .data-reservation .data-place .phone-num {
+    display: flex;
+}
+.reservation .data-reservation .data-place .phone-num .first-num {
+    margin-left: 35px;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.reservation .data-reservation .personal-information {
+    margin-top: 25px;
+}
+.reservation /* 체크 전체 부분 */
+  .data-reservation
+  .personal-information
+  .check-personal-information {
+    display: flex;
+    border: 1px solid var(--border-color-2);
+    border-radius: 5px;
+    padding: 22px 0 22px 20px;
+    position: relative;
+    width: 900px;
+}
+.reservation /* 체크 버튼*/
+  .data-reservation
+  .personal-information
+  .check-personal-information
+  .click-check-personal {
+    border-radius: 50%;
+    background: none;
+    border: 1px solid var(--border-color-2);
+    width: 30px;
+    height: 30px;
+}
+.reservation /* 체크 버튼*/
+  .data-reservation
+  .personal-information
+  .check-personal-information
+  .click-check-personal.active {
+    background: var(--main-color);
+}
+.reservation /* 체크 버튼 아이콘*/
+  .data-reservation
+  .personal-information
+  .check-personal-information
+  .click-check-personal i {
+    color: var(--border-color-2);
+    font-size: 18px;
+    margin-left: -1px;
+}
+.reservation .data-reservation .personal-information .check-personal-information p {
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--font-color-grey-2);
+}
+.reservation .data-reservation .personal-information .check-personal-information p span {
+    margin-left: 10px;
+    color: var(--main-color);
+}
+.reservation .data-reservation .personal-information .check-personal-information i.xi-angle-down-min {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+/* 설명 추가부분 */
+.reservation .data-reservation .personal-information .information-explain {
+    width: 900px;
+    border-top: none;
+    border: 1px solid var(--border-color-2);
+    padding: 20px 0 0 20px;
+    font-weight: 500;
+    display: none;
+}
+.reservation .data-reservation .personal-information .information-explain.active {
+    display: block;
+}
+.reservation .data-reservation .personal-information .information-explain li {
+    margin-bottom: 20px;
+}
+.reservation .data-reservation .reservation-click {
+    background: #000;
+    color: #fff;
+    width: 220px;
+    height: 60px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+/* --------------------------------------------------------------reserCheck */
+
+.reser-check {
+    width: 100%;
+    z-index: 10;
+}
+.reser-check .inner {
+    min-width: 1400px;
+    margin-bottom: 120px;
+}
+.reser-check .inner .top-submenu .recheck::after {
+    content: '';
+    display: block;
+    border: 1px solid var(--font-color);
+    width: 130px;
+    margin-left: -10px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+}
+.reser-check .inner .top-submenu .reser a {
+    color: var(--font-color-grey-2);
+}
+.reser-check .inner .top-submenu .reser a:hover {
+    color: var(--font-color);
+}
+.reser-check .inner .top-submenu .reser a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    width: 0px;
+    height: 2px;
+    background-color: var(--font-color);
+    transform: translateX(-50%);
+    transition: width 0.2s ease, transform 0.2s ease;
+}
+.reser-check .inner .top-submenu .reser a:hover::after {
+    width: 130px;
+    transform: translateX(-50%);
+    transition: width 0.2s ease, transform 0.2s ease;
+}
+
+.reser-check .inner .reser-check-main {
+    margin: auto;
+}
+.reser-check .inner .reser-check-main h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.reser-check .inner .reser-check-main .reser-place {
+    margin: 55px auto 0;
+    width: 600px;
+}
+.reser-check .inner .reser-check-main .reser-place .reser-check-name,
+.reser-check-phone {
+    width: 600px;
+    height: 90px;
+    border-radius: 5px;
+    background: var(--background-color-2);
+}
+.reser-check .inner .reser-check-main .reser-place .reser-name,
+.reser-num {
+    padding: 15px 40px 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--font-color-grey-1);
+}
+.reser-check .inner .reser-check-main .reser-place input {
+    border: none;
+    background: none;
+    width: 250px;
+    outline: none;
+}
+.reser-check .inner .reser-check-main .reser-place input::placeholder {
+    color: var(--font-color-grey-2);
+}
+.reser-check .inner .reser-check-main .reser-place .reser-check-name .error-message-name {
+    font-size: 15px;
+    margin: 25px 15px;
+    color: var(--font-color-warning);
+    font-weight: 500;
+    display: none;
+}
+.reser-check .inner .reser-check-main .reser-place .reser-check-phone {
+    margin-top: 35px;
+}
+.reser-check .inner .reser-check-main .reser-check-name.active {
+    border: 2px solid var(--font-color-warning);
+    background: var(--background-color-1);
+}
+.reser-check .inner .reser-check-main .reser-check-phone.active {
+    border: 2px solid var(--font-color-warning);
+    background: var(--background-color-1);
+}
+.reser-check .inner .reser-check-main .reser-place .error-message {
+    font-size: 15px;
+    margin: 5px 10px;
+    color: var(--font-color-warning);
+    font-weight: 500;
+    display: none;
+}
+.reser-check .inner .reser-check-main .reser-place .check-btn {
+    width: 600px;
+    height: 60px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 50px;
+    cursor: pointer;
+}

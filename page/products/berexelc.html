@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>coway | 코웨이</title>
+        <meta name="title" content="" />
+        <meta name="robots" content="index,follow" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="copyright" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="logo.png" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico" />
+
+        <link rel="stylesheet" href="/../../css/reset.css" />
+        <link rel="stylesheet" href="/../../css/common.css" />
+        <link rel="stylesheet" href="/../../css/main.css" />
+        <link rel="stylesheet" href="/../../css/products.css" />
+        <link rel="stylesheet" href="/../../css/modal1.css" />
+        <link rel="stylesheet" href="/../../css/modal2.css" />
+
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    </head>
+    <body>
+        <p id="skipNav"><a href="#content">본문바로가기</a></p>
+        <div id="wrap">
+            <header id="header" class="off">
+                <div class="inner"></div>
+                <!-- header 추가 -->
+            </header>
+            <!-- //header -->
+            <section id="lifeElc">
+                <navigator id="navigator"></navigator>
+
+                <img class="mainImg" src="/../../images/products/lifeElc/berexelc_main.jpg" alt="mainImg" />
+                <div class="imgInfo">
+                    <p class="h1">공간에 잠각을 더하는<br />페블체어만의 특별한 디자인</p>
+                    <p class="h2">디자인 총 4가지 색상으로 자유롭게 선택해보세요.</p>
+                    <div><a href="#">자세히보기</a></div>
+                </div>
+
+                <div class="contents">
+                    <div class="filter">
+                        <p class="filterReset">필터 초기화<img src="/../../images/common/ico_reset3.png" alt="filterReset" /></p>
+                        <div class="category">
+                            <p>카테고리<img class="arrow" src="/../../images/common/arr_up1.png" alt="arrowUp" /></p>
+                            <ul>
+                                <li><input type="checkbox" name="lifeElc" id="massageChair" /><label for="massageChair">안마의자</label></li>
+                                <li><input type="checkbox" name="lifeElc" id="massageBed" /><label for="massageBed">안마베드</label></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="itemList">
+                        <div>
+                            <p class="totalcnt"></p>
+                            <div class="sort">신상품순<img class="arrow" src="/../../images/common/arr_down1.png" alt="arrowDown" /></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <!-- footer추가 -->
+            </footer>
+
+            <!-- 모달 -->
+            <div id="modal">
+                <div class="background"></div>
+                <div class="popup popup1">
+                    <strong id="popupTitle"></strong>
+                    <p id="popupDesc"></p>
+                    <button class="close"><i class="xi-close"></i></button>
+                    <div class="btns">
+                        <button class="sure">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 비교하기 전용 모달창 -->
+            <div id="modal2">
+                <div class="background2"></div>
+                <div class="popup2 popup3">
+                    <strong id="popupTitle2">한눈에 비교하기</strong>
+                    <button class="close"><i class="xi-close"></i></button>
+                    <!-- <div class="compareOnePage">
+                        <div class="scrollArea">
+                            <ul class="compareList">
+                                <li class="noPrd">
+                                    <div class="noData">
+                                        <p>제품 리스트에서<br />'비교담기' 버튼을<br />눌러주세요.</p>
+                                    </div>
+                                </li>
+                                <li class="noPrd">
+                                    <div class="noData">
+                                        <div class="noData">
+                                            <p>제품 리스트에서<br />'비교담기' 버튼을<br />눌러주세요.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="noPrd">
+                                    <div class="noData">
+                                        <div class="noData">
+                                            <p>제품 리스트에서<br />'비교담기' 버튼을<br />눌러주세요.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="noPrd">
+                                    <div class="noData">
+                                        <div class="noData">
+                                            <p>제품 리스트에서<br />'비교담기' 버튼을<br />눌러주세요.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="defualtInfo">
+                        <p class="defaultTitle">기본정보</p>
+                        <div class="compareInfo"></div>
+                        <p class="etcInfo">
+                            제품별 부가기능, 구매유형, 프로모션 적용에 따라 결제금액이 상이할 수 있습니다. 자세한 정보는 각 제품별 상세페이지에서 확인해주세요
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/../../js/common.js"></script>
+        <script type="module" src="/../../js/navigator.js"></script>
+        <script type="module" src="/../../js/sub.js"></script>
+    </body>
+</html>

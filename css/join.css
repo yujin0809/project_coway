@@ -1,0 +1,558 @@
+#header {
+    display: none;
+}
+#footer {
+    display: none;
+}
+#pop {
+    display: none;
+}
+
+/*  회원가입 .join  */
+body {
+    padding-top: 0;
+}
+/* header */
+#join-header {
+    width: 100%;
+}
+#join-header .inner {
+    width: 800px;
+    height: 100px;
+    position: relative;
+}
+#join-header .inner h2 {
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+}
+#join-header .inner a {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#join-header .inner a i {
+    font-size: 30px;
+}
+/* container */
+.join {
+    width: 100%;
+    min-width: 800px;
+}
+.join .inner {
+    width: 800px;
+}
+/* ------------------------------------------agree */
+.join .inner .agree.active {
+    display: none;
+}
+.join .inner h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+/* country */
+.join .inner label[for='country'] {
+    display: block;
+    background: #e5e9eb;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 20px;
+}
+.join .inner label[for='country'] img {
+    height: 20px;
+    padding: 5px 10px;
+}
+.join .inner label[for='country'] p {
+    padding: 3px 5px;
+    font-weight: 500;
+    color: var(--font-color-grey-2);
+}
+.join .inner label[for='country'] p.num {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+}
+.join .inner input[type='checkbox'] {
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+/* all-agree , agree-box  */
+.join .inner label {
+    font-weight: 600;
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--font-color-grey-1);
+}
+.join .inner label.active {
+    color: var(--font-color);
+}
+.join .inner i {
+    padding-left: 14px;
+    padding-top: 5px;
+    color: #bdbdbd;
+    background: transparent;
+}
+.join .inner .agree-btn,
+.all-agree-btn {
+    width: 28px;
+    height: 28px;
+}
+
+/* all-agree */
+.join .inner .all-agree {
+    border: 1px solid #d3d2d2;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.join .inner .all-agree label {
+    font-weight: 800;
+}
+.join .inner .all-agree .all-agree-btn {
+    margin: 5px 0 0 5px;
+    background-image: url(../images/common/ico_check_off.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    border-radius: 50%;
+}
+.join .inner .all-agree .all-agree-btn.active {
+    background-image: url(../images/common/ico_check_on2.png);
+}
+/* agree-box */
+.join .inner .agree-box .box .agree-btn {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(../images/common/ico_check_off.png);
+    border: none;
+    background-size: contain;
+    border-radius: 50%;
+}
+.join .inner .agree-box .box .agree-btn.active {
+    background-image: url(../images/common/ico_check_on2.png);
+}
+.join .inner .agree-box span {
+    color: #4ab3e7;
+}
+.join .inner .agree-box {
+    border: 1px solid #d3d2d2;
+    padding: 15px;
+    border-radius: 0px 0px 5px 5px;
+    border-top: none;
+}
+.join .inner .agree-box .box {
+    position: relative;
+    margin-bottom: 19px;
+    display: block;
+    display: flex;
+    align-items: center;
+}
+.join .inner .agree-box .box1,
+.box2,
+.box3,
+.box4 {
+    cursor: pointer;
+}
+.join .inner .agree-box .box1 {
+    margin-top: 5px;
+}
+.join .inner .agree-box .box4 {
+    margin-bottom: 0;
+}
+.join .inner .agree-box .more-more {
+    /* > icon */
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+    color: var(--font-color-grey-2);
+    cursor: pointer;
+}
+.join .inner .agree-box p {
+    font-size: 15px;
+    padding-left: 55px;
+    color: var(--font-color-grey-2);
+    font-weight: 600;
+    margin-top: 5px;
+}
+/* 다음 버튼  */
+.join .inner .page-next {
+    width: 100%;
+    background: #a0a0a0;
+    color: #fff;
+    margin-top: 40px;
+    height: 30px;
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: not-allowed;
+    margin-bottom: 40px;
+}
+.join .inner .page-next a {
+    color: #fff;
+}
+.join .inner .page-next.active {
+    background: var(--font-color);
+}
+
+/* -----------------------------------------------email */
+.join .inner .email {
+    display: none;
+}
+.join .inner .email.active {
+    display: block;
+    /*  에니메이션 추가하기 */
+}
+.join .inner .email input[type='email'] {
+    width: 97.5%;
+    background: #e5e9eb;
+    border: none;
+    padding: 20px 0;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 5px;
+}
+.join .inner .email input[type='email']::placeholder {
+    font-size: 17px;
+    font-weight: 600;
+    color: #b1b1b1;
+}
+.join .inner .email p {
+    /* 오류메세지 */
+    display: none;
+    color: var(--font-color-warning);
+    font-weight: 600;
+}
+.join .inner .email p.active {
+    display: block;
+}
+
+/* --------------------------------------------------------------emailIdentify */
+.join .inner h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.join .inner .emailIdentify {
+}
+/* email-box */
+.join .inner .emailIdentify .email-box {
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+.join .inner .emailIdentify .email-box label {
+    display: block;
+    display: flex;
+    align-items: center;
+    background: #e5e9eb;
+    padding: 10px 20px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0 0 10px;
+    flex-grow: 1;
+    margin-right: 72px;
+}
+.join .inner .emailIdentify .rtbtn {
+    cursor: pointer;
+}
+.join .inner .emailIdentify .rtbtn,
+.verbtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    background: none;
+    font-size: 16px;
+    font-weight: 800;
+}
+/* verification-box */
+.join .inner .emailIdentify .verification-box {
+    position: relative;
+}
+.join .inner .emailIdentify .verification-box input {
+    width: 91%;
+    background: #e5e9eb;
+    border: none;
+    padding: 20px 0;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+.join .inner .emailIdentify .verification-box .verbtn {
+    color: #90a0a6;
+    cursor: no-drop;
+}
+.join .inner .emailIdentify .verification-box .verbtn.active {
+    color: #000000;
+    cursor: pointer;
+}
+.join .inner .emailIdentify .ver-error.active {
+    display: none;
+}
+.join .inner .emailIdentify .ver-error {
+    color: var(--font-color-warning);
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+}
+.join .inner .emailIdentify p {
+    margin-top: 0px;
+}
+/* .verification-popup */
+.join .verification-popup {
+    display: block;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #313a3e;
+    background-size: cover;
+}
+.join .verification-popup p {
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+.join.verification-popup p:first-child {
+    margin-top: 10px;
+}
+
+/* ------------------------------------------------------------information */
+.join .inner .information {
+}
+.join .inner .information h4 {
+    font-size: 18px;
+}
+.join .inner .information input {
+    width: 100%;
+    background: #e5e9eb;
+    border: none;
+    padding: 20px 0;
+    border-radius: 5px;
+    outline: none;
+}
+.join .inner .information .name-place {
+}
+.join .inner .information .name-place p {
+    color: var(--font-color-grey-1);
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.join .inner .information .name-place p.active {
+    color: var(--font-color-warning);
+}
+.join .inner .information .pw-place h4 {
+    margin-top: 15px;
+}
+.join .inner .information .pw-place input {
+}
+.join .inner .information .pw-place .pass-error {
+    color: var(--font-color-grey-1);
+    margin: 3px 0 10px;
+}
+.join .inner .information .pw-place .pass-error.active {
+    color: var(--font-color-warning);
+    margin: 3px 0 10px;
+    font-weight: 500;
+}
+.join .inner .information .pw-place .repass-error.active {
+    display: none;
+    color: var(--font-color-warning);
+    font-weight: 700;
+    display: block;
+}
+.join .inner .information .pw-place .repass-error {
+    display: none;
+}
+
+.join .inner .information .page-next.active {
+    cursor: pointer;
+    background: #000;
+}
+
+/* 이용약관 */
+#pop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.explain {
+    width: 800px;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    display: none;
+    z-index: 50;
+}
+.explain .inner {
+    width: 800px;
+    padding: 20px;
+}
+.agree-explain1.active,
+.agree-explain2.active,
+.agree-explain3.active {
+    display: block;
+}
+.explain h2 {
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+}
+.agree-explain1 span {
+    width: 160px;
+    height: 45px;
+    background: #000;
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    margin: 30px auto 0;
+}
+.agree-explain1 .explain-box1,
+.explain-box2 {
+    margin-top: 40px;
+}
+.agree-explain1 h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+.agree-explain1 strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.agree-explain1 .explain-box1 p {
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--font-color-grey-1);
+    font-size: 15px;
+}
+.agree-explain1 .explain-box2 p {
+    margin-top: 10px;
+    font-weight: 500;
+    color: var(--font-color-grey-1);
+    font-size: 15px;
+}
+.inner .explain-btn {
+    width: 760px;
+    height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    line-height: 50px;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 개인정보 이용 동의 */
+.agree-explain2 .inner {
+    padding: 20px 0 20px 20px;
+}
+.agree-explain2 .scroll-box {
+    overflow-y: scroll;
+    padding-right: 20px;
+}
+.agree-explain2 p {
+    margin-top: 10px;
+    color: var(--font-color-grey-1);
+    font-weight: 400;
+}
+.agree-explain2 .information-agree {
+    margin-top: 10px;
+    height: 700px;
+}
+.agree-explain2 .information-agree strong {
+    color: var(--font-color-grey-1);
+    font-weight: 800;
+}
+.agree-explain2 .information-agree p {
+    color: var(--font-color-grey-1);
+}
+.agree-explain2 .information-agree table {
+    width: 740px;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+.agree-explain2 .information-agree table tr,
+td {
+    color: var(--font-color-grey-1);
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid var(--border-color-1);
+}
+.agree-explain2 .information-agree table tr {
+    height: 55px;
+}
+.agree-explain2 .information-agree table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+.agree-explain2 .information-agree table tr:nth-child(1) {
+    height: 50px;
+    border-top: 2px solid #000;
+    text-align-last: left;
+}
+.agree-explain2 .information-agree table tr:nth-child(2) {
+    height: 210px;
+}
+.agree-explain2 .information-agree table tr:nth-child(3) {
+    height: 210px;
+}
+.agree-explain2 .information-agree table tr:nth-child(4) {
+    height: 140px;
+}
+.agree-explain2 .information-agree table tr td:nth-child(1) {
+    width: 150px;
+    text-align: left;
+}
+.agree-explain2 .information-agree table tr td:nth-child(2) {
+    width: 180px;
+}
+.agree-explain2 .information-agree table tr td:nth-child(3) {
+    width: 180px;
+}
+
+/* 광고 목적 개인정보 수집 이용 동의 */
+.agree-explain3 {
+    width: 800px;
+}
+.agree-explain3 .inner {
+    width: 800px;
+    padding: 20px;
+}
+.agree-explain3 .inner .marketing-agree {
+    margin-top: 20px;
+}
+.agree-explain3 .inner .marketing-agree p {
+    color: var(--font-color-grey-1);
+}

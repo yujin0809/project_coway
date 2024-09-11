@@ -1,0 +1,71 @@
+header h2 {
+    margin-top: 30px;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+}
+.login .title {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.login_form input {
+    display: block;
+    width: 600px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 70px;
+    background-color: #f2f4f5;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+.login_form button {
+    display: block;
+    width: 600px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 70px;
+    border-radius: 4px;
+}
+.login_form .login {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1b2529;
+}
+.login_form .sign {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #e5e9eb;
+}
+.login_form .kakaoLogin {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #f9e006;
+    border: 1px solid #fff;
+}
+.inner {
+    width: 800px;
+    margin: auto;
+}
+.find p {
+    display: inline-block;
+    margin-left: 130px;
+    font-size: 14px;
+}
+.icon img {
+    margin-left: 260px;
+}
+.btn button {
+    font-size: 16px;
+    width: 800px;
+}
+button {
+    color: #1b2529;
+    background-color: #fff;
+    border: 1px solid #e5e9eb;
+    border-radius: 4px;
+    min-height: 54px;
+    margin-top: 20px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- title navjs에서 해주고있음. meta 바꿔야함 -->
+        <title>자주 찾는 질문 | 코웨이</title>
+        <meta name="title" content="자주 찾는 질문 | 코웨이" />
+        <meta name="keywords" content="코웨이,coway,coway.com,비데,연수기,매트리스,안마의자" />
+        <meta name="description" content="코웨이 자주 찾는 질문 페이지입니다." />
+        <meta name="robots" content="index,follow" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="/images/common/favicon.ico" />
+
+        <meta property="og:title" content="자주 찾는 질문 | 코웨이" />
+        <meta property="og:site_name" content="coway" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://mall.cowaystatic.com/static/front/resources/web/images/common/og-coway.jpg" />
+        <meta property="og:description" content="코웨이 자주 찾는 질문 페이지입니다." />
+        <meta property="og:locale" content="ko_KR" />
+
+        <link rel="stylesheet" href="../../../../css/reset.css" />
+        <link rel="stylesheet" href="../../../../css/common.css" />
+        <link rel="stylesheet" href="../../../../css/cs.css" />
+
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+
+        <style>
+            .nav .inner span:nth-child(5):before {
+                display: none;
+            }
+            #modal {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="skipNav"><a href="#content">본문바로가기</a></p>
+
+        <div id="wrap">
+            <header id="header" class="off"></header>
+            <navigator id="navigator"></navigator>
+
+            <main class="cs post">
+                <div class="inner">
+                    <section class="side">
+                        <div class="side-menu">
+                            <ul>
+                                <li><a href="#">제품 사용 지원</a></li>
+                                <li><a href="../../csProduct/as_step1.html">A/S·이전설치 신청</a></li>
+                                <li class="active"><a href="../../csProduct/faq.html">자주 찾는 질문</a></li>
+                                <li><a href="../../csProduct/fareGuarantee_step1.html">요금/보증 안내</a></li>
+                                <li><a href="../../csProduct/manual.html">제품 사용설명서 찾기</a></li>
+                                <li><a href="../../csProduct/transfer_step1.html">양도양수 서비스</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">문의 지원</a></li>
+                                <li><a href="../../csContact/contact.html">1:1 문의</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">고객 게시판</a></li>
+                                <li><a href="../../csBoard/notice.html">공지사항</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="contents">
+                        <div class="con-tit">
+                            <h2>자주 찾는 질문</h2>
+                        </div>
+                        <div class="con-wrap">
+                            <h3 class="title">A/S신청방법이 궁금해요</h3>
+                            <p class="cate">사이트이용</p>
+                            <div class="con-box">
+                                <p>
+                                    PC와 모바일 어디서나 코웨이 홈페이지 내의 마이코웨이 또는 고객지원 페이지에서 A/S 및 이전, 해체, 이사를 신청하실 수
+                                    있습니다.
+                                </p>
+                                <p>
+                                    - 마이코웨이: [마이코웨이>제품관리>사용중인 제품>A/Sㆍ이전설치 신청]<br />
+                                    - 고객지원: [고객지원>제품사용지원>A/Sㆍ이전설치 신청]
+                                </p>
+                                <p>
+                                    문제가 해결되지 않았다면 상담을 통해 더 자세하게 도와드리겠습니다.<br />
+                                    (카카오 상담톡 또는 1588-5200)
+                                </p>
+                            </div>
+                            <a class="more" href="../../csProduct/faq.html">목록보기<i class="xi-plus"></i></a>
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+            <footer id="footer"></footer>
+            <!-- 모달 -->
+            <div id="modal">
+                <div class="background"></div>
+                <div class="popup popup1">
+                    <strong id="popupTitle"></strong>
+                    <p id="popupDesc"></p>
+                    <button class="close"><i class="xi-close"></i></button>
+                    <div class="btns">
+                        <button class="sure">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="../../../../js/common.js"></script>
+        <script type="module" src="../../../../js/navigator.js"></script>
+        <script type="module" src="../../../../js/sub.js"></script>
+    </body>
+</html>
