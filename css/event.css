@@ -1,6 +1,3 @@
-.event_tap {
-    margin-bottom: 120px;
-}
 .event_tap .title .on a {
     font-size: 18px;
     font-weight: 700;
@@ -176,9 +173,6 @@
     font-size: 15px;
     font-weight: 500;
     margin-left: 20px;
-}
-.event-list {
-    margin-bottom: 120px;
 }
 .event-list .event-item {
     border-top: 1px solid var(--border-color-2);
@@ -403,9 +397,6 @@
     font-weight: 700;
     color: #90a0a6;
 }
-.con-box10 {
-    margin-bottom: 120px;
-}
 .con-box10 ul li {
     font-size: 14px;
     color: #bec8cc;
@@ -416,4 +407,200 @@
 }
 .con-box10 a {
     color: skyblue;
+}
+.bannerImg {
+    position: relative;
+    height: 510px;
+    background: url(../images/Live/banner.png) no-repeat center center;
+    vertical-align: bottom;
+    margin: 0 6px;
+}
+.text_warp {
+    position: relative;
+    top: -400px;
+    left: 450px;
+}
+.text_warp .txt1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+.text_warp .txt2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+}
+.text_warp .txt3 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+}
+.image-span {
+    display: inline-block;
+    width: 165px;
+    height: 72px;
+    background-image: url(../images/Live/ico_live.png);
+    background-size: cover;
+}
+.btn_wrap .btntxt {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.btn {
+    width: 30%;
+    height: 54px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 27px;
+    cursor: pointer;
+    color: #fff;
+    background: #00a8e3;
+    border: 1px solid #00a8e3;
+}
+.live_swap {
+    display: flex;
+    gap: 20px;
+}
+.background-image {
+    display: inline-block;
+    width: 84px;
+    height: 36px;
+    background: url(../images/Live/ico_live.png) no-repeat center;
+}
+.live1 h3 {
+    font-size: 38px;
+    font-weight: 700;
+}
+.animation {
+    position: relative;
+    top: -20px;
+    font-size: 15px;
+    font-weight: 800;
+    margin-left: 1350px;
+    color: #00a8e3;
+    cursor: pointer;
+}
+.livetext {
+    font-size: 20px;
+    font-weight: 700;
+}
+.sec5 {
+    margin: 0 20px;
+    background-color: #efece8;
+    border-radius: 8px;
+    margin-bottom: 100px;
+    margin-top: 40px;
+}
+.top_txt {
+    position: relative;
+    background: url(../images/Live/ico_guide.png) no-repeat center 50px;
+    padding: 180px 0 0;
+}
+.txt4 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.txt5 {
+    font-size: 20px;
+    text-align: center;
+}
+.ico_img1 {
+    position: relative;
+    background: url(../images/Live/ico_googleplay.png) no-repeat center 50px;
+    padding-top: 130px;
+    width: 340px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+.txt6 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.txt7 {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #90a0a6;
+}
+.qr1 {
+    margin-top: 130px;
+    text-align: center;
+}
+.ico_img2 {
+    position: relative;
+    background: url(../images/Live/ico_Apple.png) no-repeat center 50px;
+    padding-top: 130px;
+    width: 340px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+.txt8 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.txt9 {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #90a0a6;
+}
+.qr2 {
+    margin-top: 130px;
+    text-align: center;
+}
+.ico_img3 {
+    position: relative;
+    background: url(../images/Live/ico_coway.png) no-repeat center 50px;
+    padding-top: 130px;
+    width: 340px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.txt10 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.txt11 {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #90a0a6;
+}
+.qr3 {
+    margin-top: 130px;
+    text-align: center;
+}
+.horizontal-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.prev {
+    position: absolute;
+    transform: translate(0, -50%);
+    left: 0px;
+    top: 50%;
+    margin-top: -35px;
+    cursor: pointer;
+}
+.next {
+    position: absolute;
+    transform: rotate(180deg) translate(0, 50%);
+    right: 0px;
+    top: 50%;
+    margin-top: -35px;
+    cursor: pointer;
 }
